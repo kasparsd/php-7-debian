@@ -23,7 +23,7 @@ cd php-src
 ./buildconf
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
-                  --with-config-file-scan-dir=/usr/local/php7/conf.d \
+                  --with-config-file-scan-dir=/usr/local/php7/etc/conf.d \
                   --enable-bcmath \
                   --with-bz2 \
                   --enable-calendar \
