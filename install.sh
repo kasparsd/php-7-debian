@@ -1,6 +1,9 @@
 #!/bin/bash
 cd "$(dirname "$0")"
 
+# Create a dir for storing PHP module conf
+mkdir /usr/local/php7/etc/conf.d
+
 # Symlink php-fpm to php7-fpm
 ln -s /usr/local/php7/sbin/php-fpm /usr/local/php7/sbin/php7-fpm
 
