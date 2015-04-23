@@ -17,7 +17,7 @@ DESC="PHP7 FastCGI Process Manager"
 NAME=php7-fpm
 DAEMON=/usr/local/php7/sbin/$NAME
 CONFFILE=/usr/local/php7/etc/php-fpm.conf
-DAEMON_ARGS="--daemonize --fpm-config $CONFILE"
+DAEMON_ARGS="--daemonize --fpm-config $CONFFILE"
 CONF_PIDFILE=$(sed -n 's/^pid[ =]*//p' $CONFFILE)
 PIDFILE=${CONF_PIDFILE:-/var/run/php7-fpm.pid}
 TIMEOUT=30
