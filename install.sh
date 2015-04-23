@@ -1,6 +1,5 @@
 #!/bin/bash
-
-./build.sh
+cd "$(dirname "$0")"
 
 # Symlink php-fpm to php7-fpm
 ln -s /usr/local/php7/sbin/php-fpm /usr/local/php7/sbin/php7-fpm
