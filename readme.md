@@ -2,17 +2,36 @@
 
 Uses the latest source of PHP from the `master` branch of https://github.com/php/php-src.
 
+
 ## Install
 
 	git clone https://github.com/kasparsd/php-7-debian.git
 	cd php-7-debian
+	./build.sh
 	./install.sh
 
-The PHP-FPM is be available at `127.0.0.1:9007`
+The PHP-FPM can be operated using the `php7-fpm` init script:
+
+	Usage: /etc/init.d/php5-fpm {start|stop|status|restart|reload|force-reload}
+
+while the socket is available at
+
+	127.0.0.1:9007
+
 
 ## Configuration files
 
-All package files are stored under `/usr/local/php7`.
+All PHP configuration files are stored under `/usr/local/php7`:
+	
+	/usr/local/php7/lib/php.ini
+	/usr/local/php7/etc/php-fpm.conf
+	/usr/local/php7/etc/php-fpm.d/www.conf
+	/usr/local/php7/etc/conf.d/modules.ini
+
+while the Debian init script is added to:
+
+	/etc/init.d/php7-fpm
+
 
 ## Credits
 
