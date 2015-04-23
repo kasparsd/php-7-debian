@@ -1,5 +1,9 @@
 # Install PHP 7 (CLI and FPM) on Debian Wheezy
 
+Uses the latest source of PHP from the `master` branch of https://github.com/php/php-src.
+
+## Install
+
 	git clone https://github.com/kasparsd/php-7-debian.git
 	cd php-7-debian
 	./install.sh
