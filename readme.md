@@ -9,3 +9,8 @@ The PHP-FPM is be available at `127.0.0.1:9007`
 ## Configuration files
 
 All package files are stored under `/usr/local/php7`.
+
+## Credits
+
+- Created by [Kaspars Dambis](http://kaspars.net)
+- Based on [`php7.sh` by Tom Van Looy](http://www.intracto.com/nl/blog/running-symfony2-on-php7) 
