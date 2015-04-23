@@ -25,6 +25,7 @@ cd php-src
 ./buildconf
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
+                  --with-config-file-scan-dir=/usr/local/php7/conf.d \
                   --enable-bcmath \
                   --with-bz2 \
                   --enable-calendar \
@@ -38,6 +39,7 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --with-mhash \
                   --enable-mysqlnd \
                   --with-mysql=mysqlnd \
+                  --with-mysql-sock=/var/run/mysqld/mysqld.sock \
                   --with-mysqli=mysqlnd \
                   --with-pdo-mysql=mysqlnd \
                   --with-openssl \
@@ -83,6 +85,7 @@ cd ../
 ln -s /usr/local/php7/sbin/php-fpm /usr/local/php7/sbin/php7-fpm
 
 # Add config files
+cp php-src/php.ini-production /usr/local/php7/lib/php.ini
 cp conf/www.conf /usr/local/php7/etc/php-fpm.d/www.conf
 cp conf/php-fpm.conf /usr/local/php7/etc/php-fpm.conf
 
