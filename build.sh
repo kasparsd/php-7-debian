@@ -62,9 +62,6 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
 make
 make install
 
-PATH=$PATH:/usr/local/php7/bin
-echo 'export PATH="$PATH:/usr/local/php7/bin"' >> /etc/bash.bashrc
-
 # Build FPM
 make clean
 
@@ -77,3 +74,7 @@ make clean
 
 make
 make install
+
+# Add php bin to bash path
+PATH=$PATH:/usr/local/php7/bin
+echo 'export PATH="$PATH:/usr/local/php7/bin"' >> /etc/bash.bashrc
