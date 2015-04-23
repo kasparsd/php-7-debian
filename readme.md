@@ -12,7 +12,7 @@ Uses the latest source of PHP from the `master` branch of https://github.com/php
 
 The PHP-FPM can be operated using the `php7-fpm` init script:
 
-	Usage: /etc/init.d/php5-fpm {start|stop|status|restart|reload|force-reload}
+	Usage: /etc/init.d/php7-fpm {start|stop|status|restart|reload|force-reload}
 
 while the socket is available at
 
