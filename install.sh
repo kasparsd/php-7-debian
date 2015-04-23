@@ -98,9 +98,3 @@ service php7-fpm start
 #echo "zend_extension=/usr/local/php7/lib/php/extensions/no-debug-non-zts-${API_VERSION}/opcache.so" > /etc/php7/conf.d/opcache.ini
 #ln -s /etc/php7/conf.d/opcache.ini /etc/php7/cli/conf.d/opcache.ini
 #ln -s /etc/php7/conf.d/opcache.ini /etc/php7/fpm/conf.d/opcache.ini
-
-# Install init scripts
-#cp -R /vagrant/etc/* /etc
-#chmod +x /etc/init.d/php7-fpm
-#update-rc.d php7-fpm defaults
-#service php7-fpm start
