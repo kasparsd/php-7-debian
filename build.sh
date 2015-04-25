@@ -54,24 +54,12 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --with-zlib \
                   --enable-zip \
                   --with-readline \
-                  --with-curl"
+                  --with-curl \
+                  --enable-fpm \
+                  --with-fpm-user=www-data \
+                  --with-fpm-group=www-data"
 
-# Build CLI
-./configure \
-    $CONFIGURE_STRING
-
-make
-make install
-
-# Build FPM
-make clean
-
-./configure \
-    $CONFIGURE_STRING \
-    --disable-cli \
-    --enable-fpm \
-    --with-fpm-user=www-data \
-    --with-fpm-group=www-data
+./configure $CONFIGURE_STRING
 
 make
 make install
@@ -79,3 +67,4 @@ make install
 # Add php bin to bash path
 PATH=$PATH:/usr/local/php7/bin
 echo 'export PATH="$PATH:/usr/local/php7/bin"' >> /etc/bash.bashrc
+source /etc/bash.bashrc
