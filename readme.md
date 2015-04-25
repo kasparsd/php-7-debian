@@ -1,6 +1,12 @@
 # Install PHP 7 (CLI and FPM) on Debian Wheezy
 
-Uses the latest source of PHP from the `master` branch of https://github.com/php/php-src.
+These are a set of bash scripts for building and running PHP 7 on Debian based Linux distributions:
+
+- `builds.sh` installs the necessary build dependencies and the latest development version of PHP with CLI and FPM server APIs (SAPI) from the `master` branch of https://github.com/php/php-src
+ 
+- `./install.sh` sets up PHP-FPM by moving configuration files into their correct locations in `/usr/local/php7` and enables the `php7-fpm` service and adds it to the startup sequence.
+
+Please note that these are very simple scripts that don't implement error checking or process validation. You will probably need to run them with super user permissions (`sudo`).
 
 
 ## Usage
@@ -14,10 +20,17 @@ The PHP-FPM can be operated using the `php7-fpm` init script:
 
 	Usage: /etc/init.d/php7-fpm {start|stop|status|restart|reload|force-reload}
 
-while the socket is available at
+while the FPM socket is available at
 
 	127.0.0.1:9007
 
+and PHP CLI:
+	
+	$ /usr/local/php7/bin/php -v
+	PHP 7.0.0-dev (cli) (built: Apr 23 2015 18:14:01) 
+	Copyright (c) 1997-2015 The PHP Group
+	Zend Engine v3.0.0-dev, Copyright (c) 1998-2015 Zend Technologies
+	    with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend Technologies
 
 ## Configuration files
 
@@ -32,6 +45,69 @@ while the Debian init script is added to:
 
 	/etc/init.d/php7-fpm
 
+## Extensions
+
+Note that most of the third-party PHP extensions are [not yet compatible with PHP 7](https://github.com/gophp7/gophp7-ext/wiki/extensions-catalog) and [GoPHP7-ext](http://gophp7.org/) (also on [GitHub](https://github.com/gophp7/gophp7-ext)) is a project to help do that. Here is a list of PHP modules that are enabled by default in this build:
+
+	$ /usr/local/php7/bin/php -m
+	[PHP Modules]
+	bcmath
+	bz2
+	calendar
+	Core
+	ctype
+	curl
+	date
+	dba
+	dom
+	exif
+	fileinfo
+	filter
+	ftp
+	gd
+	gettext
+	hash
+	iconv
+	json
+	libxml
+	mbstring
+	mcrypt
+	mhash
+	mysqli
+	mysqlnd
+	openssl
+	pcntl
+	pcre
+	PDO
+	pdo_mysql
+	pdo_sqlite
+	Phar
+	posix
+	pspell
+	readline
+	Reflection
+	session
+	shmop
+	SimpleXML
+	soap
+	sockets
+	SPL
+	sqlite3
+	standard
+	sysvmsg
+	sysvsem
+	sysvshm
+	tokenizer
+	wddx
+	xml
+	xmlreader
+	xmlwriter
+	Zend OPcache
+	zip
+	zlib
+
+	[Zend Modules]
+	Zend OPcache
 
 ## Credits
 
