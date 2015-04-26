@@ -63,8 +63,3 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
 
 make
 make install
-
-# Add php bin to bash path
-PATH=$PATH:/usr/local/php7/bin
-echo 'export PATH="$PATH:/usr/local/php7/bin"' >> /etc/bash.bashrc
-source /etc/bash.bashrc
