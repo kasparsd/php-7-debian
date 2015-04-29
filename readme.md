@@ -1,6 +1,6 @@
-# Install PHP 7 (CLI and FPM) on Debian Wheezy
+# Install PHP 7 on Debian/Ubuntu
 
-These are a set of bash scripts for building and running PHP 7 on Debian based Linux distributions:
+These are a set of bash scripts for building and running PHP 7 (CLI and FPM) on Debian based Linux distributions:
 
 - `builds.sh` installs the necessary build dependencies and the latest development version of PHP with CLI and FPM server APIs (SAPI) from the `master` branch of https://github.com/php/php-src
  
@@ -108,6 +108,28 @@ Note that most of the third-party PHP extensions are [not yet compatible with PH
 
 	[Zend Modules]
 	Zend OPcache
+
+## Installing Memcached Extension
+
+[Memcached extension for PHP](https://github.com/php-memcached-dev/php-memcached) already supports PHP 7 and here is a quick way to install it:
+
+	git clone https://github.com/php-memcached-dev/php-memcached
+	cd php-memcached
+	git checkout -b php7 origin/php7
+
+	/usr/local/php7/bin/phpize
+	./configure --with-php-config=/usr/local/php7/bin/php-config
+	make
+	sudo make install
+
+and then append `extension=memcached.so` to `/usr/local/php7/etc/conf.d/modules.ini`:
+
+	# Zend OPcache
+	zend_extension=opcache.so
+	
+	# Memcached
+	extension=memcached.so
+
 
 ## Credits
 
