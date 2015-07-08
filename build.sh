@@ -2,8 +2,8 @@
 cd "$(dirname "$0")"
 
 # Dependencies
-apt-get update
-apt-get install -y \
+sudo apt-get update
+sudo apt-get install -y \
     build-essential \
     git-core \
     autoconf \
@@ -17,12 +17,12 @@ apt-get install -y \
     libpspell-dev \
     libreadline-dev
 
-mkdir /usr/local/php7
+sudo mkdir /usr/local/php7
 
 git clone https://github.com/php/php-src.git
 cd php-src
 git checkout PHP-7.0.0
-./buildconf
+./buildconf --force
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --with-config-file-scan-dir=/usr/local/php7/etc/conf.d \
@@ -63,4 +63,4 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
 ./configure $CONFIGURE_STRING
 
 make
-make install
+sudo make install
