@@ -21,6 +21,7 @@ mkdir /usr/local/php7
 
 git clone https://github.com/php/php-src.git
 cd php-src
+git checkout PHP-7.0.0
 ./buildconf
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
