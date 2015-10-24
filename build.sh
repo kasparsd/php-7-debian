@@ -13,6 +13,7 @@ sudo apt-get install -y \
     libmcrypt-dev \
     libcurl4-openssl-dev \
     libltdl-dev \
+    libjpeg-dev \
     libpng-dev \
     libpspell-dev \
     libreadline-dev
