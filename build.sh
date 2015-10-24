@@ -36,6 +36,7 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --enable-ftp \
                   --with-gettext \
                   --with-gd \
+                  --with-jpeg-dir \
                   --enable-mbstring \
                   --with-mcrypt \
                   --with-mhash \
