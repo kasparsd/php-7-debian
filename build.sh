@@ -5,12 +5,15 @@ cd "$(dirname "$0")"
 sudo apt-get update
 sudo apt-get install -y \
     build-essential \
+    pkg-config \
     git-core \
     autoconf \
     bison \
     libxml2-dev \
     libbz2-dev \
     libmcrypt-dev \
+    libicu-dev \
+    libssl-dev \
     libcurl4-openssl-dev \
     libltdl-dev \
     libjpeg-dev \
@@ -31,6 +34,7 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --enable-bcmath \
                   --with-bz2 \
                   --enable-calendar \
+                  --enable-intl \
                   --enable-exif \
                   --enable-dba \
                   --enable-ftp \

@@ -68,6 +68,7 @@ Note that most of the third-party PHP extensions are [not yet compatible with PH
 	gettext
 	hash
 	iconv
+	intl
 	json
 	libxml
 	mbstring
