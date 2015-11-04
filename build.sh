@@ -31,6 +31,7 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --enable-bcmath \
                   --with-bz2 \
                   --enable-calendar \
+                  --enable-intl \
                   --enable-exif \
                   --enable-dba \
                   --enable-ftp \
