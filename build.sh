@@ -5,12 +5,15 @@ cd "$(dirname "$0")"
 sudo apt-get update
 sudo apt-get install -y \
     build-essential \
+    pkg-config \
     git-core \
     autoconf \
     bison \
     libxml2-dev \
     libbz2-dev \
     libmcrypt-dev \
+    libicu-dev \
+    libssl-dev \
     libcurl4-openssl-dev \
     libltdl-dev \
     libjpeg-dev \
