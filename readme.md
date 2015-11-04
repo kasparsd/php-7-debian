@@ -111,7 +111,11 @@ Note that most of the third-party PHP extensions are [not yet compatible with PH
 
 ## Installing Memcached Extension
 
-[Memcached extension for PHP](https://github.com/php-memcached-dev/php-memcached) already supports PHP 7 and here is a quick way to install it:
+[Memcached extension for PHP](https://github.com/php-memcached-dev/php-memcached) already supports PHP 7. First you install the dependencies:
+
+	$ sudo apt-get install libmemcached-dev libmemcached11
+	
+and then build and install the extension:
 
 	$ git clone https://github.com/php-memcached-dev/php-memcached
 	$ cd php-memcached
