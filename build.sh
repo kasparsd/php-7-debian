@@ -70,4 +70,5 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
 ./configure $CONFIGURE_STRING
 
 make
+make test
 sudo make install
