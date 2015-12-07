@@ -23,7 +23,7 @@ sudo apt-get install -y \
 
 sudo mkdir /usr/local/php7
 
-git clone https://github.com/php/php-src.git
+git clone --depth=1 https://github.com/php/php-src.git
 cd php-src
 git checkout PHP-7.0.0
 git pull
