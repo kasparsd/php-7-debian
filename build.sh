@@ -9,6 +9,7 @@ sudo apt-get install -y \
     git-core \
     autoconf \
     bison \
+    apache2-dev \
     libxml2-dev \
     libbz2-dev \
     libmcrypt-dev \
@@ -34,6 +35,7 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --without-pear \ # to avoid the pear.php.net certificate error
                   --enable-bcmath \
                   --with-bz2 \
+                  --with-apxs2 \
                   --enable-calendar \
                   --enable-intl \
                   --enable-exif \
