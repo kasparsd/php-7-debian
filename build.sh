@@ -31,7 +31,7 @@ git pull
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --with-config-file-scan-dir=/usr/local/php7/etc/conf.d \
-                  --without-pear \ # to avoid the pear.php.net certificate error
+                  --without-pear \
                   --enable-bcmath \
                   --with-bz2 \
                   --enable-calendar \
