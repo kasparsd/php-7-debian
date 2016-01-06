@@ -2,7 +2,7 @@
 
 These are a set of bash scripts for building and running PHP 7 (CLI and FPM) on Debian based Linux distributions:
 
-- `build.sh` installs the necessary build dependencies and the latest development version of PHP with CLI and FPM server APIs (SAPI) from the `PHP-7.0.0` branch of https://github.com/php/php-src
+- `build.sh` installs the necessary build dependencies and the latest development version of PHP with CLI and FPM server APIs (SAPI) from the `PHP-7.0.1` branch of https://github.com/php/php-src
  
 - `install.sh` sets up PHP-FPM by moving configuration files into their correct locations in `/usr/local/php7` and enables the `php7-fpm` service and adds it to the startup sequence.
 
@@ -27,9 +27,9 @@ while the FPM socket is available at
 and PHP CLI:
 	
 	$ /usr/local/php7/bin/php -v
-	PHP 7.0.0-dev (cli) (built: Apr 23 2015 18:14:01) 
+	PHP 7.0.1 (cli) (built: Jan  6 2016 01:17:03) ( NTS )
 	Copyright (c) 1997-2015 The PHP Group
-	Zend Engine v3.0.0-dev, Copyright (c) 1998-2015 Zend Technologies
+	Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
 	    with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend Technologies
 
 ## Configuration files
