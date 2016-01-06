@@ -14,7 +14,7 @@ Please note that these are very simple scripts that don't implement error checki
 	$ git clone https://github.com/kasparsd/php-7-debian.git
 	$ cd php-7-debian
 	$ ./build.sh
-	$ ./install.sh
+	$ sudo ./install.sh
 
 The PHP-FPM can be operated using the `php7-fpm` init script:
 
