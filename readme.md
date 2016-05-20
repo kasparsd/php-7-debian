@@ -135,6 +135,10 @@ and then append `extension=memcached.so` to `/usr/local/php7/etc/conf.d/modules.
 	# Memcached
 	extension=memcached.so
 
+## Installing Imagick Extension
+
+	$ ./build-imagick.sh
+	$ sudo ./install-imagick.sh
 
 ## Credits
 
