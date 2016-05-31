@@ -125,5 +125,5 @@ Note that most of the third-party PHP extensions are [not yet compatible with PH
 ## Credits
 
 - Created by [Kaspars Dambis](http://kaspars.net)
-- Created by [Piotr Plenik](https://github.com/jupeter)
+- Contributors: [Piotr Plenik](https://github.com/jupeter)
 - Based on [`php7.sh`](https://gist.github.com/tvlooy/953a7c0658e70b573ab4) by [Tom Van Looy](http://www.intracto.com/nl/blog/running-symfony2-on-php7) 
