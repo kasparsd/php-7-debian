@@ -112,35 +112,18 @@ Note that most of the third-party PHP extensions are [not yet compatible with PH
 
 ## Installing Memcached Extension
 
-[Memcached extension for PHP](https://github.com/php-memcached-dev/php-memcached) already supports PHP 7. First you install the dependencies:
-
-	$ sudo apt-get install libmemcached-dev libmemcached11
+	$ cd php-7-debian/extensions
+	$ ./memcached-build.sh
+	$ sudo ./memcached-install.sh
 	
-and then build and install the extension:
-
-	$ git clone https://github.com/php-memcached-dev/php-memcached
-	$ cd php-memcached
-	$ git checkout -b php7 origin/php7
-
-	$ /usr/local/php7/bin/phpize
-	$ ./configure --with-php-config=/usr/local/php7/bin/php-config
-	$ make
-	$ sudo make install
-
-and then append `extension=memcached.so` to `/usr/local/php7/etc/conf.d/modules.ini`:
-
-	# Zend OPcache
-	zend_extension=opcache.so
-	
-	# Memcached
-	extension=memcached.so
-
 ## Installing Imagick Extension
 
-	$ ./build-imagick.sh
-	$ sudo ./install-imagick.sh
+	$ cd php-7-debian/extensions
+	$ ./imagick-build.sh
+	$ sudo ./imagick-install.sh
 
 ## Credits
 
 - Created by [Kaspars Dambis](http://kaspars.net)
+- Contributors: [Piotr Plenik](https://github.com/jupeter)
 - Based on [`php7.sh`](https://gist.github.com/tvlooy/953a7c0658e70b573ab4) by [Tom Van Looy](http://www.intracto.com/nl/blog/running-symfony2-on-php7) 
