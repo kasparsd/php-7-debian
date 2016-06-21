@@ -3,7 +3,7 @@
 These are a set of bash scripts for building and running PHP 7 (CLI and FPM) on Debian based Linux distributions:
 
 - `build.sh` installs the necessary build dependencies and the latest development version of PHP with CLI and FPM server APIs (SAPI) from the latest PHP 7 branch of https://github.com/php/php-src
- 
+
 - `install.sh` sets up PHP-FPM by moving configuration files into their correct locations in `/usr/local/php7` and enables the `php7-fpm` service and adds it to the startup sequence.
 
 Please note that these are very simple scripts that don't implement error checking or process validation.
@@ -25,17 +25,18 @@ while the FPM socket is available at
 	127.0.0.1:9007
 
 and PHP CLI:
-	
+
 	$ /usr/local/php7/bin/php -v
 	PHP 7.0.1 (cli) (built: Jan  6 2016 01:17:03) ( NTS )
 	Copyright (c) 1997-2015 The PHP Group
 	Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
 	    with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend Technologies
 
+
 ## Configuration files
 
 All PHP configuration files are stored under `/usr/local/php7`:
-	
+
 	/usr/local/php7/lib/php.ini
 	/usr/local/php7/etc/php-fpm.conf
 	/usr/local/php7/etc/php-fpm.d/www.conf
@@ -44,6 +45,7 @@ All PHP configuration files are stored under `/usr/local/php7`:
 while the Debian init script is added to:
 
 	/etc/init.d/php7-fpm
+
 
 ## Extensions
 
@@ -110,20 +112,26 @@ Note that most of the third-party PHP extensions are [not yet compatible with PH
 	[Zend Modules]
 	Zend OPcache
 
-## Installing Memcached Extension
 
-	$ cd php-7-debian/extensions
+## Installing Extensions
+
+Please note that you need to restart `php7-fpm` to activate the extension.
+
+### Install the Memcached Extension
+
+	$ ./php-7-debian/extensions
 	$ ./memcached-build.sh
-	$ sudo ./memcached-install.sh
-	
-## Installing Imagick Extension
+	$ ./memcached-install.sh
+
+### Install the Imagick Extension
 
 	$ cd php-7-debian/extensions
 	$ ./imagick-build.sh
-	$ sudo ./imagick-install.sh
+	$ ./imagick-install.sh
+
 
 ## Credits
 
 - Created by [Kaspars Dambis](http://kaspars.net)
 - Contributors: [Piotr Plenik](https://github.com/jupeter)
-- Based on [`php7.sh`](https://gist.github.com/tvlooy/953a7c0658e70b573ab4) by [Tom Van Looy](http://www.intracto.com/nl/blog/running-symfony2-on-php7) 
+- Based on [`php7.sh`](https://gist.github.com/tvlooy/953a7c0658e70b573ab4) by [Tom Van Looy](http://www.intracto.com/nl/blog/running-symfony2-on-php7)
