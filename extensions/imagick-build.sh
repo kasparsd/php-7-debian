@@ -9,7 +9,6 @@ sudo apt-get install -y \
 
 git clone https://github.com/mkoppanen/imagick.git
 cd imagick
-git checkout phpseven
 git pull
 
 /usr/local/php7/bin/phpize
