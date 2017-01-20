@@ -47,7 +47,7 @@ fi
 do_check()
 {
     # Run php-fpm with -t option to check the configuration file syntax
-    errors=$($DAEMON --fpm-config $CONFFILE -t 2>&1 | grep "\[ERROR\]" || true);
+    errors=$($DAEMON --fpm-config $CONFFILE -t 2>&1 | grep -i "error" || true);
     if [ -n "$errors" ]; then
         echo "Please fix your configuration file..."
         echo $errors
