@@ -70,5 +70,5 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
 
 ./configure $CONFIGURE_STRING
 
-make
+make -j `cat /proc/cpuinfo | grep processor | wc -l`
 sudo make install
