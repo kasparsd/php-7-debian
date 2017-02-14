@@ -8,6 +8,8 @@ These are a set of bash scripts for building and running PHP 7 (CLI and FPM) on 
 
 Please note that these are very simple scripts that don't implement error checking or process validation.
 
+![Building PHP 7 on Orange Pi Zero (ARM)](https://kaspars.net/wp-content/uploads/2017/02/orange-pi-zero-php7-build.png)
+
 
 ## Usage
 
