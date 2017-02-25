@@ -121,7 +121,7 @@ Please note that you need to restart `php7-fpm` to activate the extension.
 
 ### Install the Memcached Extension
 
-	$ ./php-7-debian/extensions
+	$ cd php-7-debian/extensions
 	$ ./memcached-build.sh
 	$ ./memcached-install.sh
 
