@@ -30,6 +30,7 @@ git checkout PHP-7.1.2
 ./buildconf --force
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
+                  --enable-huge-code-pages \
                   --with-config-file-scan-dir=/usr/local/php7/etc/conf.d \
                   --without-pear \
                   --enable-bcmath \
