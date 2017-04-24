@@ -25,7 +25,7 @@ sudo mkdir /usr/local/php7
 
 git clone https://github.com/php/php-src.git
 cd php-src
-git fetch
+git fetch --all --tags
 git checkout tags/php-7.1.4
 ./buildconf --force
 
