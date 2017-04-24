@@ -26,7 +26,7 @@ sudo mkdir /usr/local/php7
 git clone https://github.com/php/php-src.git
 cd php-src
 git fetch
-git checkout tags/php-7.1.3
+git checkout tags/php-7.1.4
 ./buildconf --force
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
