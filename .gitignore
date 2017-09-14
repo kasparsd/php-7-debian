@@ -1,2 +1,5 @@
 php-src
+extensions/imagick/
+extensions/phpredis/
+extensions/php-memcached/
 
