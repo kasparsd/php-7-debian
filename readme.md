@@ -18,6 +18,12 @@ Please note that these are very simple scripts that don't implement error checki
 	$ ./build.sh
 	$ sudo ./install.sh
 
+On systems with little amount of RAM such as Raspberry Pi you might want to decrease the number of parallel `make` jobs by passing the `JOB_COUNT` variable:
+
+	$ JOB_COUNT=1 ./build.sh
+
+The default job count is equal to the number of CPU cores.
+
 The PHP-FPM can be operated using the `php7-fpm` init script:
 
 	Usage: /etc/init.d/php7-fpm {start|stop|status|restart|reload|force-reload}

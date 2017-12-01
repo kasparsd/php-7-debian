@@ -1,6 +1,12 @@
 #!/bin/bash
 cd "$(dirname "$0")"
 
+# Use all cores for the build process
+CORE_COUNT=$(cat /proc/cpuinfo | grep processor | wc -l)
+
+# Allow JOB_COUNT environment variable to override the job count
+JOB_COUNT=${JOB_COUNT:-$CORE_COUNT}
+
 # Dependencies
 sudo apt-get update
 sudo apt-get install -y \
@@ -71,5 +77,5 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
 
 ./configure $CONFIGURE_STRING
 
-make -j `cat /proc/cpuinfo | grep processor | wc -l`
+make -j $JOB_COUNT
 sudo make install
