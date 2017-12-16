@@ -38,7 +38,6 @@ git checkout tags/php-7.2.0
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --enable-huge-code-pages \
                   --with-config-file-scan-dir=/usr/local/php7/etc/conf.d \
-                  --without-pear \
                   --enable-bcmath \
                   --with-bz2 \
                   --enable-calendar \
