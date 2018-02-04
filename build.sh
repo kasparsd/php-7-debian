@@ -2,7 +2,7 @@
 cd "$(dirname "$0")"
 
 # Use all cores for the build process
-CORE_COUNT=$(cat /proc/cpuinfo | grep processor | wc -l)
+CORE_COUNT=$(< /proc/cpuinfo | grep -c processor -l)
 
 # Allow JOB_COUNT environment variable to override the job count
 JOB_COUNT=${JOB_COUNT:-$CORE_COUNT}
@@ -32,7 +32,7 @@ sudo mkdir /usr/local/php7
 git clone https://github.com/php/php-src.git
 cd php-src
 git fetch --tags --prune
-git checkout tags/php-7.2.1
+git checkout tags/php-7.2.2
 ./buildconf --force
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
@@ -74,7 +74,7 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --with-fpm-user=www-data \
                   --with-fpm-group=www-data"
 
-./configure $CONFIGURE_STRING
+./configure "$CONFIGURE_STRING"
 
-make -j $JOB_COUNT
+make -j "$JOB_COUNT"
 sudo make install
