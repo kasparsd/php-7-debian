@@ -2,7 +2,7 @@
 cd "$(dirname "$0")"
 
 # Use all cores for the build process
-CORE_COUNT=$(< /proc/cpuinfo | grep -c processor -l)
+CORE_COUNT=$(< /proc/cpuinfo | grep -c processor)
 
 # Allow JOB_COUNT environment variable to override the job count
 JOB_COUNT=${JOB_COUNT:-$CORE_COUNT}
