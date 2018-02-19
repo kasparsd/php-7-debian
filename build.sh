@@ -74,7 +74,7 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --with-fpm-user=www-data \
                   --with-fpm-group=www-data"
 
-./configure "$CONFIGURE_STRING"
+./configure $CONFIGURE_STRING
 
 make -j "$JOB_COUNT"
 sudo make install
