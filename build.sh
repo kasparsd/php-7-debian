@@ -17,7 +17,6 @@ sudo apt-get install -y \
     bison \
     libxml2-dev \
     libbz2-dev \
-    libmcrypt-dev \
     libicu-dev \
     libssl-dev \
     libcurl4-openssl-dev \
@@ -49,10 +48,8 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --with-gd \
                   --with-jpeg-dir \
                   --enable-mbstring \
-                  --with-mcrypt \
                   --with-mhash \
                   --enable-mysqlnd \
-                  --with-mysql=mysqlnd \
                   --with-mysql-sock=/var/run/mysqld/mysqld.sock \
                   --with-mysqli=mysqlnd \
                   --with-pdo-mysql=mysqlnd \
