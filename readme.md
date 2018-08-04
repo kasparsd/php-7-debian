@@ -34,6 +34,9 @@ while the FPM socket is available at
 
 and PHP CLI at `/usr/local/php7/bin/php`.
 
+### Updating
+
+Pull down the latest changes from this repository `git pull` and run `./build.sh`.
 
 
 ## Configuration files
