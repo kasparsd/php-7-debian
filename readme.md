@@ -55,7 +55,7 @@ while the Debian init script is added to:
 
 ## Extensions
 
-Note that most of the third-party PHP extensions are [not yet compatible with PHP 7](https://github.com/gophp7/gophp7-ext/wiki/extensions-catalog) and [GoPHP7-ext](http://gophp7.org/) (also on [GitHub](https://github.com/gophp7/gophp7-ext)) is a project to help do that. Here is a list of PHP modules that are enabled by default in this build:
+Here is a list of PHP modules that are enabled by default in this build:
 
 	$ /usr/local/php7/bin/php -m
 	[PHP Modules]
@@ -80,8 +80,6 @@ Note that most of the third-party PHP extensions are [not yet compatible with PH
 	json
 	libxml
 	mbstring
-	mcrypt
-	mhash
 	mysqli
 	mysqlnd
 	openssl
