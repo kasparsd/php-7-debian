@@ -50,7 +50,6 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --enable-mbstring \
                   --with-mhash \
                   --enable-mysqlnd \
-                  --with-mysql-sock=/var/run/mysqld/mysqld.sock \
                   --with-mysqli \
                   --with-pdo-mysql \
                   --with-openssl \
