@@ -34,9 +34,6 @@ git fetch --tags --prune
 git checkout tags/php-7.2.8
 ./buildconf --force
 
-# Enable MySQL socket search during the build.
-export PHP_MYSQL_SOCK=yes
-
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --enable-huge-code-pages \
                   --with-config-file-scan-dir=/usr/local/php7/etc/conf.d \
@@ -54,6 +51,7 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --with-mhash \
                   --enable-mysqlnd \
                   --with-mysqli \
+                  --with-mysql-sock=yes \
                   --with-pdo-mysql \
                   --with-openssl \
                   --enable-pcntl \
