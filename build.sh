@@ -65,6 +65,7 @@ CONFIGURE_STRING="--prefix=/usr/local/php7 \
                   --enable-wddx \
                   --with-zlib \
                   --enable-zip \
+                  --without-libzip \
                   --with-readline \
                   --with-curl \
                   --enable-fpm \
