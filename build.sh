@@ -15,6 +15,9 @@ sudo apt-get install -y \
     git-core \
     autoconf \
     bison \
+    re2c \
+    libonig-dev \
+    libsqlite3-dev\
     libxml2-dev \
     libbz2-dev \
     libicu-dev \
